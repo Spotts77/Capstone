@@ -1,0 +1,12 @@
+
+.landing-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/Hero-image.jpg') !important; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

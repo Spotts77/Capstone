@@ -1,0 +1,9 @@
+.nav-link{
+    #grad {
+        background-image: linear-gradient(to bottom right, #FC4503, #FA3007);
+      }
+    }
+
+    #offcanvasNavbarContent{
+      background-color: transparent !important;
+    }
