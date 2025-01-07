@@ -1,9 +1,54 @@
-.nav-link{
-    #grad {
-        background-image: linear-gradient(to bottom right, #FC4503, #FA3007);
-      }
-    }
+.navbar{
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+#NavBarTitle{
+  color: #F1F9FF;
+  padding-left: 20px;
+  font-size: 25px;
+}
 
-    #offcanvasNavbarContent{
-      background-color: transparent !important;
-    }
+.navbar-toggler {
+  border-radius: 50%; /* Makes the button round */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Removes the border */
+}
+
+.navbar-toggler-icon {
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+
+#formbutton {
+  margin-left: 680px;
+  padding-top: 15px;
+  padding-left: 15px; /* Add some padding for better spacing inside the button */
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  border-radius: 50px; /* Make the button pill-shaped */
+  background-image: radial-gradient(circle, #FA5A07, #FA3007); /* Radial gradient */
+  color: white; 
+  border: none; 
+  text-align: center; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+
+#formbutton:hover {
+  background-image: radial-gradient(circle, #FA3007, #FA5A07); /* Reverse gradient effect on hover (optional) */
+}
+
+.offcanvas {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+

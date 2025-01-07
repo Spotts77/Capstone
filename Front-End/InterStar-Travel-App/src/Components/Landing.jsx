@@ -1,11 +1,13 @@
-import "./LandingStyle.css";
-import "./Hero-imgage.jpg";
+import "./LandingStyle.css"
 export default function Landing() {
     return (
-        <div className='landing-container'>
-            <div className="hero-content">
-                <img src="assets/Hero-imgage.jpg" alt="hero-img" />
-            </div>
+        <section className="hero">
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1 id="Headline">SPACELINE <div> FOR </div> <div>EARTH </div></h1>
+            <p>Exploring the future of space travel</p>
+          </div>
         </div>
+      </section>
     )
 }

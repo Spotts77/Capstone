@@ -6,7 +6,10 @@ function Nav() {
   return (
     <nav className="navbar fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Offcanvas navbar</a>
+        <a className="navbar-brand" href="#" id="NavBarTitle">InterStar Travel</a>
+        <button className="rounded-pill" id="formbutton">
+          BECOME A VOYAGER 
+        </button>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -15,21 +18,26 @@ function Nav() {
             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">InterStar Travel</h5>
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div className="offcanvas-body" style={{ backgroundColor: "transparent" }}>
+          <div className="offcanvas-body">
             <ul className="navbar-nav nav-pills justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link className="nav-link active rounded-pill" to="/" aria-current="page">
-                  Home
+                <Link className="nav-link active rounded-pill" to="/sign-in">
+                  Sign In
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link rounded-pill" to="/link">
-                  Link
+                <Link className="nav-link rounded-pill" to="/book-flight">
+                  Book a Flight
                 </Link>
               </li>
               <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle rounded-pill" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <Link className="nav-link rounded-pill" to="#">
+                  Destinations
+                </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <Link className="nav-link rounded-pill" to="#">
+                  Space Craft
                 </Link>
               </li>
             </ul>
