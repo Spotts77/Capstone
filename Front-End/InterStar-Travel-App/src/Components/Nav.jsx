@@ -9,12 +9,16 @@ function Nav() {
     <nav className="navbar fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#" id="NavBarTitle">InterStar Travel</a>
+        <Link to={"/"}>
         <button className="rounded-pill" id="formbutton">
           BECOME A VOYAGER 
         </button>
+        </Link>
+        <Link to={"/"}>
         <button className="navbar-toggler" type="button">
           <span className="navbar-toggler-icon"></span>
         </button>
+        </Link>
         </div>
     </nav>
   );

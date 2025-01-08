@@ -13,17 +13,14 @@
   font-size: 25px;
   border: none;
 }
-
-.navbar-toggler {
-  border-radius: 50%; /* Makes the button round */
-  background-color: transparent; /* Transparent background */
-  border: none; /* Removes the border */
+.navbar-toggler{
+  border: none;
+  padding: 20px;
 }
-
 .navbar-toggler-icon {
   border-radius: 50%;
-  background-color: transparent;
-  border: none;
+  background-image: radial-gradient(circle, #FA5A07, #FA3007) !important;
+  border: 22px solid #FA3007; /* Orange color */
 }
 
 

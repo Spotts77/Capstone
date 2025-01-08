@@ -57,8 +57,58 @@
     justify-content: left;
     align-items: left;
     text-align: left;
+    position: relative;
+    animation: slideIn 2s ease-in-out forwards;
   }
 
-  #Headline div{
-    margin-top: -10px;
+  #Headline span {
+    display: inline-block;  /* Ensure divs appear in a row */
+    font-size: 50px;
+    font-weight: bold;
+    border-bottom: 2px solid #FA3007;
+    width: 250px;
+    padding-bottom: 5px; /* Space between text and underline */
+  margin-bottom: 40px; /* Optional: Space between the divs */
+  margin-right: 10px; 
+  position: relative;
+  opacity: 1;
   }
+
+  #Headline span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position it just below the text */
+    left: 0;
+    width: 100%; /* Same width as the text */
+    height: 2px; /* Match the thickness of the border */
+    background-color: #FA3007; /* Same color as the underline */
+    filter: blur(2px); /* Apply blur to the underline */
+    opacity: 0.7; /* Make it slightly transparent */
+    box-shadow: 0 0 8px 3px rgba(250, 48, 7, 0.6); /* Apply glow effect */
+    z-index: 1; /* Make sure it's under the text */
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%); /* Start off-screen to the left */
+      opacity: 0; /* Fully transparent */
+    }
+    100% {
+      transform: translateX(0); /* End at normal position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+
+  #Headline div:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first div */
+  }
+  
+  #Headline div:nth-child(2) {
+    
+    animation-delay: 0.4s; /* Delay for the second div */
+  }
+
+  #Headline div:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for the second div */
+  }
+
