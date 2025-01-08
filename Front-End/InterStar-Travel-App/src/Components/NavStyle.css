@@ -46,7 +46,7 @@
 }
 
 .offcanvas-title{
-  color: #F1F9FF;
+  color: #012549;
   font-size: 30px !important;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -56,12 +56,12 @@
 }
 
 .nav-link{
-  color: #F1F9FF !important;
+  color: #012549 !important;
   font-size: 30px !important; 
 }
 
 .nav-link:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
-  color: rgb(139, 0, 0);
+  color: #F1F9FF !important;
 }
