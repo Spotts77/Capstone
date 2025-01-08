@@ -24,8 +24,8 @@
   padding-bottom: 15px;
   font-size: 14px;
   border-radius: 50px; /* Make the button pill-shaped */
-  background-image: radial-gradient(circle, #FA5A07, #FA3007); /* Radial gradient */
-  color: white; 
+  background-image: radial-gradient(circle, #53D9FC, #012549); /* Radial gradient */
+  color: #F1F9FF; 
   border: none; 
   text-align: center; 
   font-weight: bold; 
@@ -33,11 +33,11 @@
 }
 
 #formbutton:hover {
-  background-image: radial-gradient(circle, #FA3007, #FA5A07); /* Reverse gradient effect on hover (optional) */
+  background-image: radial-gradient(circle, #012549, #53D9FC); /* Reverse gradient effect on hover (optional) */
 }
 
 .offcanvas{
-  background-image: linear-gradient(to bottom,#FA5A07, #FA3007);
+  background-image: linear-gradient(to bottom,#53D9FC, #012549);
   color: #F1F9FF;
   padding: 10px;
   border: none;

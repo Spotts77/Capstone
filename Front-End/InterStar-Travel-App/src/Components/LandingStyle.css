@@ -48,7 +48,7 @@
   #Headline{
     font-size: 100px;
     font-family: monospace;
-    background-image: linear-gradient(to bottom, #F1F9FF,#FA3007);
+    background-image: linear-gradient(to bottom, #53D9FC,#03459B);
     background-position: relative; /* Gradient colors */
     -webkit-background-clip: text;
     background-clip: text;

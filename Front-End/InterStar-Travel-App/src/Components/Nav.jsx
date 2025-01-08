@@ -29,10 +29,7 @@ function Nav() {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Log In</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">Book A Flight</Link>
+                <Link className="nav-link" to="#">Manage Booking</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="#">Destinations</Link>
