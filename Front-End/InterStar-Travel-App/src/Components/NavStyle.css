@@ -9,8 +9,9 @@
 }
 #NavBarTitle{
   color: #F1F9FF;
-  padding-left: 20px;
+  padding-left: 50px;
   font-size: 25px;
+  border: none;
 }
 
 .navbar-toggler {
@@ -45,10 +46,4 @@
 #formbutton:hover {
   background-image: radial-gradient(circle, #FA3007, #FA5A07); /* Reverse gradient effect on hover (optional) */
 }
-
-.offcanvas {
-  background-color: transparent !important;
-  border: none !important;
-}
-
 
