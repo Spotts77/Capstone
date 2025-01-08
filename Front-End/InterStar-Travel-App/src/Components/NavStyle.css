@@ -6,21 +6,13 @@
   justify-content: space-between;
   align-items: center;
   border: none;
+  background-color: transparent;
 }
 #NavBarTitle{
   color: #F1F9FF;
   padding-left: 50px;
   font-size: 25px;
   border: none;
-}
-.navbar-toggler{
-  border: none;
-  padding: 20px;
-}
-.navbar-toggler-icon {
-  border-radius: 50%;
-  background-image: radial-gradient(circle, #FA5A07, #FA3007) !important;
-  border: 22px solid #FA3007; /* Orange color */
 }
 
 
@@ -44,3 +36,32 @@
   background-image: radial-gradient(circle, #FA3007, #FA5A07); /* Reverse gradient effect on hover (optional) */
 }
 
+.offcanvas{
+  background-image: linear-gradient(to bottom,#FA5A07, #FA3007);
+  color: #F1F9FF;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.offcanvas-title{
+  color: #F1F9FF;
+  font-size: 30px !important;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.nav-link{
+  color: #F1F9FF !important;
+  font-size: 30px !important; 
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: rgb(139, 0, 0);
+}

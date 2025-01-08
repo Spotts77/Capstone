@@ -5,11 +5,11 @@ export default function Landing() {
         <div className="hero-overlay">
           <div className="hero-content">
             <h1 id="Headline">
-                <span>SPACE</span>
-                <span>ADVENTURE</span> 
-                <span>FREEDOM</span>
+                <span>ADVENTURE</span>
+                <span>AWAITS</span> 
+                <span>ABOVE</span>
             </h1>
-            <p>Exploring the future of space travel</p>
+            <p id="header-subtitle">Exploring the future of space travel</p>
           </div>
         </div>
       </section>

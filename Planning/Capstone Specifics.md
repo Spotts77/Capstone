@@ -18,7 +18,6 @@
     - booking_id
     - booking_date
     - status
-    - payment_status
     - ticket_num 
     - user_id FK
     - flight_id FK

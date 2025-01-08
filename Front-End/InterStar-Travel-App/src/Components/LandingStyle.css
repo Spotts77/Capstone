@@ -24,7 +24,7 @@
     background-position: center;
     transform: scaleX(1); 
     /* Mirrors the background image horizontally */
-    z-index: 1; /* Makes sure the image stays behind the text */
+    z-index: 1;
   }
   
   /* Hero Overlay */
@@ -48,7 +48,8 @@
   #Headline{
     font-size: 100px;
     font-family: monospace;
-    background-image: linear-gradient(to bottom, #F1F9FF,#FA3007); /* Gradient colors */
+    background-image: linear-gradient(to bottom, #F1F9FF,#FA3007);
+    background-position: relative; /* Gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -57,35 +58,7 @@
     justify-content: left;
     align-items: left;
     text-align: left;
-    position: relative;
-    animation: slideIn 2s ease-in-out forwards;
-  }
-
-  #Headline span {
-    display: inline-block;  /* Ensure divs appear in a row */
-    font-size: 50px;
-    font-weight: bold;
-    border-bottom: 2px solid #FA3007;
-    width: 250px;
-    padding-bottom: 5px; /* Space between text and underline */
-  margin-bottom: 40px; /* Optional: Space between the divs */
-  margin-right: 10px; 
-  position: relative;
-  opacity: 1;
-  }
-
-  #Headline span::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Position it just below the text */
-    left: 0;
-    width: 100%; /* Same width as the text */
-    height: 2px; /* Match the thickness of the border */
-    background-color: #FA3007; /* Same color as the underline */
-    filter: blur(2px); /* Apply blur to the underline */
-    opacity: 0.7; /* Make it slightly transparent */
-    box-shadow: 0 0 8px 3px rgba(250, 48, 7, 0.6); /* Apply glow effect */
-    z-index: 1; /* Make sure it's under the text */
+    animation: slideIn 2.5s ease-in-out forwards;
   }
 
   @keyframes slideIn {
@@ -99,16 +72,20 @@
     }
   }
 
-  #Headline div:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first div */
-  }
-  
-  #Headline div:nth-child(2) {
-    
-    animation-delay: 0.4s; /* Delay for the second div */
+  #header-subtitle{
+    color: #F1F9FF;
+    animation: fadeInEffect 2s ease-in-out forwards; 
+    animation-delay: 2.5s; /* Delay the animation */
+    opacity: 0;
   }
 
-  #Headline div:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the second div */
+  @keyframes fadeInEffect {
+    0% {
+      opacity: 0;  /* Element starts fully transparent */
+    }
+    100% {
+      opacity: 1;  /* Element becomes fully visible */
+    }
   }
+
 
