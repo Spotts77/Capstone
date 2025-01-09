@@ -9,7 +9,7 @@
   padding-top: 20px;
   margin-left: 50px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   z-index: 10; /* Ensures it sits above other content */
 }
 
@@ -22,7 +22,8 @@
   background-image: linear-gradient(to bottom, #F1F9ff, #53D9FC);
   background-position: relative; /* Gradient colors */
   -webkit-background-clip: text;
-  animation: slideIn 2.5s ease-in-out forwards;
+  background-clip: text;
+  animation: FadeIn 2.5s ease-in-out forwards;
   text-shadow: rgba(241, 249, 255, 0.2) 0px 0px 20px;
 }
 
@@ -31,16 +32,36 @@
   padding-right: 30px;
   text-align: left;
   font-size: 17px;
+  animation: FadeIn 2.5s ease-in-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
-@keyframes slideIn {
+.info-panel-button{
+  background-color: #53D9FC;
+  margin-left: 30px;
+  color: #012549;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  animation: FadeIn 2.5s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+.view-icon{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+@keyframes FadeIn {
   0% {
-    transform: translateX(-100%); /* Start off-screen to the left */
-    opacity: 0; /* Fully transparent */
+    opacity: 0; 
   }
   100% {
-    transform: translateX(0); /* End at normal position */
-    opacity: 1; /* Fully visible */
+    opacity: 1; 
   }
 }
 

@@ -41,6 +41,7 @@ function FlightSearchForm() {
       Exoplanetary adventures just became a reality. From now on, you can use your cosmic credits to explore every exoplanet in the galaxy, offering you infinite possibilities and unparalleled flexibility in planning your interstellar journey. The only thing left to decide is which distant world you'll explore next.
       </p>
       <button className="info-panel-button">
+        <img src="./src/assets/binocular.png" alt="view icon" className="view-icon"/>
         View Destinations
         </button>
     </div>
