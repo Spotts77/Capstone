@@ -1,14 +1,12 @@
 .navbar{
-  margin-top: 30px;
-  margin-right: 50px;
-  margin-left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: none;
-  background-color: transparent;
+  background-color: black;
 }
 #NavBarTitle{
+  padding-top: 20px;
   color: #F1F9FF;
   padding-left: 50px;
   font-size: 25px;
@@ -17,8 +15,9 @@
 
 
 #formbutton {
+  margin-top: 20px;
   margin-left: 680px;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-left: 15px; /* Add some padding for better spacing inside the button */
   padding-right: 15px;
   padding-bottom: 15px;
@@ -64,4 +63,15 @@
   text-decoration: underline;
   text-underline-offset: 10px;
   color: #F1F9FF !important;
+}
+
+.navbar-toggler{
+  margin-top: 20px;
+  border: white !important;
+}
+
+.nav-icon{
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
 }

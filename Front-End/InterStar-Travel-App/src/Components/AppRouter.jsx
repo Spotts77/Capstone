@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "/src/App";
 import NotFound from "./NotFound";
 import Landing from "./Landing";
+import FlightSearchForm from "./FlightSearchForm";
 
 function AppRouter() {
   const routes = [
@@ -12,6 +13,10 @@ function AppRouter() {
         {
           path: "/",
           element: <Landing />,
+        }, 
+        {
+          path:"/flights",
+          element: <FlightSearchForm />
         }
       ],
     },

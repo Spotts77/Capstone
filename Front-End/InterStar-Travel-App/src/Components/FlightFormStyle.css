@@ -1,0 +1,146 @@
+.info-panel {
+  position: absolute;
+  top: 150px; /* Distance from the top of the page */
+  left: 0;
+  width: 500px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  background-color: #012549;
+  color: #F1F9FF;
+  padding-top: 20px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  z-index: 10; /* Ensures it sits above other content */
+}
+
+.info-panel h2 {
+  font-size: 50px;
+  text-align: left;
+  padding-inline: 20px;
+  padding-left: 30px;
+  color: transparent;
+  background-image: linear-gradient(to bottom, #F1F9ff, #53D9FC);
+  background-position: relative; /* Gradient colors */
+  -webkit-background-clip: text;
+  animation: slideIn 2.5s ease-in-out forwards;
+  text-shadow: rgba(241, 249, 255, 0.2) 0px 0px 20px;
+}
+
+.info-panel-text{
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+  font-size: 17px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at normal position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.flight-search-form-container {
+  padding-top: 600px; 
+  margin-bottom: 30px;
+  background-image: url('./src/assets/starship-moon.jpg');
+  background-size: cover;
+  height: 100vh; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.flight-search-form {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #53D9FC;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: flex-start; 
+  width: 100%; 
+  max-width: 100%;
+  border: 30px solid #012549;
+  box-sizing: border-box; 
+  border-radius: 40px !important;
+}
+
+.form-floating {
+  position: relative;
+  flex: 1 1 200px; 
+  min-width: 0; 
+}
+
+.form-floating input {
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%; 
+  height: 40px;
+}
+
+.form-floating label {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  font-size: 12px;
+  color: #53D9FC;
+  transition: 0.2s;
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 10px;
+  color: #53D9FC !important; /* Color when label floats */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #012549;
+  color: #F1F9FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 40px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.solid-cover{
+  background-color: #012549;
+  padding-bottom: 20px;
+}
+
+#form-title{
+  padding-left: 50px;
+  padding-top: 30px;
+  color: #F1F9FF;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.title-icon{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.search-icon{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.info-panel{
+  z-index: 1;
+}

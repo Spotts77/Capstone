@@ -9,9 +9,10 @@ function Nav() {
     <nav className="navbar fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#" id="NavBarTitle">InterStar Travel</a>
-        <Link to={"/"}>
+        <Link to={"/flights"}>
         <button className="rounded-pill" id="formbutton">
-          BECOME A VOYAGER 
+          <img src="./src/assets/luggage.png" alt="booking icon" className="nav-icon"/>
+          BOOK A VOYAGE
         </button>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

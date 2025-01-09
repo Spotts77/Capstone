@@ -59,6 +59,7 @@
     align-items: left;
     text-align: left;
     animation: slideIn 2.5s ease-in-out forwards;
+    text-shadow: rgba(241, 249, 255, 0.2) 0px 0px 20px;
   }
 
   @keyframes slideIn {
