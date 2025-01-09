@@ -116,7 +116,7 @@ function FlightSearchForm() {
           />
           <label htmlFor="floatingPassengerCount">Tickets:</label>
         </div>
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading} id="search-button">
           <img src="./src/assets/search.png" alt="search icon" className="search-icon"/>
           {loading ? 'Loading...' : 'Search Flights'}
         </button>

@@ -165,3 +165,7 @@ button:disabled {
 .info-panel{
   z-index: 1;
 }
+
+#search-button{
+  border-radius: 5px !important;
+}
