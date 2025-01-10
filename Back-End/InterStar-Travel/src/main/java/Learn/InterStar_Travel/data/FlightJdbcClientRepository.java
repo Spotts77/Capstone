@@ -9,6 +9,5 @@ public class FlightJdbcClientRepository{
 
 
     public FlightJdbcClientRepository(JdbcClient jdbcClient) {this.jdbcClient = jdbcClient;}
-
     
 }

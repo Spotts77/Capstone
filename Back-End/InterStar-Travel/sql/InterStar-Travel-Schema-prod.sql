@@ -30,11 +30,11 @@ spaceport_id int primary key auto_increment,
 spaceport_name varchar(50) not null, 
 contact_number varchar(50) not null,
 facilities varchar(250) not null,
-location varchar(25) not null,
 year_established varchar(25) not null,
+destination_id int not null,
 constraint fk_destination_id 
-foreign key (destination_id)
-references destination(destination_id)
+	foreign key (destination_id)
+	references destination(destination_id)
 );
 
 create table spacecraft (
@@ -45,9 +45,10 @@ max_payload varchar(25) not null,
 stages int not null,
 spacecraft_status varchar (25) not null,
 specific_impulse varchar(25) not null, 
+spaceline_id int not null,
 constraint fk_spaceline_id
-foreign key (spaceline_id)
-references spaceline(spaceline_id)
+	foreign key (spaceline_id)
+	references spaceline(spaceline_id)
 );
 
 create table flight (
@@ -57,26 +58,31 @@ departure_time varchar(25) not null,
 departure_date date not null, 
 arrival_time varchar(25) not null,
 price_per_ticket int not null,
+departure_port_id int not null,
+arrival_port_id int not null,
+spacecraft_id int not null,
 constraint fk_departure_port_id
-foreign key (spaceport_id) 
-references spaceport(spaceport_id),
+	foreign key (departure_port_id) 
+	references spaceport(spaceport_id),
 constraint fk_arrival_port_id
-foreign key (spaceport_id) 
-references spaceport(spaceport_id), 
+	foreign key (arrival_port_id) 
+	references spaceport(spaceport_id), 
 constraint fk_spacecraft_id
-foreign key (spacecraft_id) 
-references spacecraft(spacecraft_id)
+	foreign key (spacecraft_id) 
+	references spacecraft(spacecraft_id)
 );
 
 create table booking (
 booking_id int primary key auto_increment, 
 booking_date date not null, 
 booking_status varchar(50) not null, 
-ticket_num int not null, 
+ticket_num int not null,
+passenger_id int not null, 
+flight_id int not null, 
 constraint fk_passenger_id 
-foreign key (passenger_id) 
-references passenger(passenger_id), 
+	foreign key (passenger_id) 
+	references passenger(passenger_id), 
 constraint fk_flight_id
-foreign key (flight_id) 
-references flight(flight_id)
+	foreign key (flight_id) 
+	references flight(flight_id)
 );
