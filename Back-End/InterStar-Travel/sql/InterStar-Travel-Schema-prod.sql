@@ -22,7 +22,7 @@ spaceline_id int primary key auto_increment,
 spaceline_name varchar(50) not null, 
 contact_number varchar(50) not null, 
 founded_year varchar(25) not null, 
-fleet_size varchar(25) not null
+fleet_size int not null
 );
 
 create table spaceport(
@@ -40,9 +40,9 @@ references destination(destination_id)
 create table spacecraft (
 spacecraft_id int primary key auto_increment,
 spaceCraft_name varchar(50) not null,
-max_passengers varchar(25) not null,
+max_passengers int not null,
 max_payload varchar(25) not null,
-stages varchar(25) not null,
+stages int not null,
 spacecraft_status varchar (25) not null,
 specific_impulse varchar(25) not null, 
 constraint fk_spaceline_id
