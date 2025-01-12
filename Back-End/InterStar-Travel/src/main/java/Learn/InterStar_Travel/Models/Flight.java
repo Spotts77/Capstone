@@ -1,43 +1,59 @@
 package Learn.InterStar_Travel.Models;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Flight {
     private int flightId;
     private String flightName;
-    private LocalDateTime departureTime;
-    private LocalDateTime arrivalTime;
-    private int pricePerTicket;
+    private LocalTime departureTime;
+    private LocalTime arrivalTime;
+    private BigDecimal pricePerTicket;
     private LocalDate departureDate;
 
-    private Spaceport departurePort;
-    private Spaceport arrivalPort;
+    private int departurePortId;
+    private int arrivalPortId;
 
-    private Spacecraft spacecraft;
+    private int spacecraftId;
 
-    public Spacecraft getSpacecraft() {
-        return spacecraft;
+    public Flight(){}
+
+    public Flight(int flightId, String flightName, LocalTime departureTime, LocalTime arrivalTime,
+                  BigDecimal pricePerTicket, LocalDate departureDate, int departurePortId, int arrivalPortId,
+                  int spacecraftId){
+        this.flightId = flightId;
+        this.flightName = flightName;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.pricePerTicket = pricePerTicket;
+        this.departureDate = departureDate;
+        this.departurePortId = departurePortId;
+        this.arrivalPortId = arrivalPortId;
     }
 
-    public void setSpacecraft(Spacecraft spacecraft) {
-        this.spacecraft = spacecraft;
+    public int getSpacecraftId() {
+        return spacecraftId;
     }
 
-    public Spaceport getArrivalPort() {
-        return arrivalPort;
+    public void setSpacecraftId(int spacecraftId) {
+        this.spacecraftId = spacecraftId;
     }
 
-    public void setArrivalPort(Spaceport arrivalPort) {
-        this.arrivalPort = arrivalPort;
+    public int getArrivalPortId() {
+        return arrivalPortId;
     }
 
-    public Spaceport getDeparturePort() {
-        return departurePort;
+    public void setArrivalPortId(int arrivalPortId) {
+        this.arrivalPortId = arrivalPortId;
     }
 
-    public void setDeparturePort(Spaceport departurePort) {
-        this.departurePort = departurePort;
+    public int getDeparturePortId() {
+        return departurePortId;
+    }
+
+    public void setDeparturePortId(int departurePortId) {
+        this.departurePortId = departurePortId;
     }
 
     public LocalDate getDepartureDate() {
@@ -48,27 +64,27 @@ public class Flight {
         this.departureDate = departureDate;
     }
 
-    public int getPricePerTicket() {
+    public BigDecimal getPricePerTicket() {
         return pricePerTicket;
     }
 
-    public void setPricePerTicket(int pricePerTicket) {
+    public void setPricePerTicket(BigDecimal pricePerTicket) {
         this.pricePerTicket = pricePerTicket;
     }
 
-    public LocalDateTime getArrivalTime() {
+    public LocalTime getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalDateTime arrivalTime) {
+    public void setArrivalTime(LocalTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
-    public LocalDateTime getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalDateTime departureTime) {
+    public void setDepartureTime(LocalTime departureTime) {
         this.departureTime = departureTime;
     }
 

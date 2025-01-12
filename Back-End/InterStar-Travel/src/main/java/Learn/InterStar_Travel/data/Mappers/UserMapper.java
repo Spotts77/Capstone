@@ -1,9 +1,8 @@
 package Learn.InterStar_Travel.data.Mappers;
 
 import Learn.InterStar_Travel.Models.User;
+import org.springframework.jdbc.core.RowMapper;
 
-import javax.swing.tree.RowMapper;
-import javax.swing.tree.TreePath;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -18,10 +17,5 @@ public class UserMapper implements RowMapper<User> {
         user.setPhoneNumber(resultSet.getString("phone_number"));
         user.setEmail(resultSet.getString("email"));
         return user;
-    }
-
-    @Override
-    public int[] getRowsForPaths(TreePath[] path) {
-        return new int[0];
     }
 }

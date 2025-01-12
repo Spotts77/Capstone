@@ -6,6 +6,15 @@ public class Destination {
     private String destinationDescription;
     private String imageUrl;
 
+    public Destination(){}
+
+    public Destination(int destinationId, String destinationName, String destinationDescription, String imageUrl){
+        this.destinationId = destinationId;
+        this.destinationName = destinationName;
+        this.destinationDescription = destinationDescription;
+        this.imageUrl = imageUrl;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }

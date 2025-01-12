@@ -54,10 +54,10 @@ constraint fk_spaceline_id
 create table flight (
 flight_id int primary key auto_increment, 
 flight_name varchar(50) not null, 
-departure_time varchar(25) not null,
+departure_time time not null,
 departure_date date not null, 
-arrival_time varchar(25) not null,
-price_per_ticket int not null,
+arrival_time time not null,
+price_per_ticket decimal not null,
 departure_port_id int not null,
 arrival_port_id int not null,
 spacecraft_id int not null,
@@ -77,6 +77,7 @@ booking_id int primary key auto_increment,
 booking_date date not null, 
 booking_status varchar(50) not null, 
 ticket_num int not null,
+total int not null,
 passenger_id int not null, 
 flight_id int not null, 
 constraint fk_passenger_id 
@@ -86,6 +87,27 @@ constraint fk_flight_id
 	foreign key (flight_id) 
 	references flight(flight_id)
 );
+
+delimiter //
+create procedure set_known_good_state()
+begin
+
+     delete from booking;
+    alter table booking auto_increment = 1;
+    delete from flight;
+    alter table flight auto_increment = 1;
+    delete from spacecraft;
+    alter table spacecraft auto_increment = 1;
+	delete from spaceport;
+    alter table spaceport auto_increment = 1;
+	delete from destination;
+    alter table destination auto_increment = 1;
+    delete from passenger;
+    alter table passenger auto_increment = 1;
+	delete from spaceline;
+    alter table spaceline auto_increment = 1;
+
+
 
 INSERT INTO passenger (first_name, last_name, email, phone_number) 
 values
@@ -110,7 +132,9 @@ insert into spacecraft (spacecraft_name, max_passengers, max_payload, stages, sp
 
 insert into flight (flight_name, departure_time, departure_date, arrival_time, price_per_ticket, 
 departure_port_id, arrival_port_id, spacecraft_id) values
-('VST To MBA', '10:30:00', 2025-02-10, '22:10:00', 600, 1, 2, 1), 
-('MBA To VST', '22:10:00', 2025-02-15, '10:30:00', 1000, 2, 1, 2);
+('VST To MBA', '10:30:00', '2025-02-10', '22:10:00', 600.00, 1, 2, 1), 
+('MBA To VST', '22:10:00', '2025-02-15', '10:30:00', 1000.00, 2, 1, 2);
 
-
+end //
+-- 4. Change the statement terminator back to the original.
+delimiter ;

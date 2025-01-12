@@ -9,14 +9,27 @@ public class Spacecraft {
     private String spacecraftStatus;
     private String specificImpulse;
 
-    private Spaceline spaceline;
+    private int spacelineId;
 
-    public Spaceline getSpaceline() {
-        return spaceline;
+    public Spacecraft(){}
+
+    public Spacecraft(int spacecraftId, String spacecraftName, int maxPassengers, String maxPayload,
+    int stages, String spacecraftStatus, String specificImpulse){
+        this.spacecraftId = spacecraftId;
+        this.spacecraftName = spacecraftName;
+        this.maxPassengers = maxPassengers;
+        this.maxPayload = maxPayload;
+        this.stages = stages;
+        this.spacecraftStatus = spacecraftStatus;
+        this.specificImpulse = specificImpulse;
     }
 
-    public void setSpaceline(Spaceline spaceline) {
-        this.spaceline = spaceline;
+    public int getSpacelineId() {
+        return spacelineId;
+    }
+
+    public void setSpacelineId(int spacelineId) {
+        this.spacelineId = spacelineId;
     }
 
     public String getSpecificImpulse() {

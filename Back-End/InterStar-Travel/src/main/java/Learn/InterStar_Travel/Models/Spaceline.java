@@ -7,6 +7,16 @@ public class Spaceline {
     private String foundedYear;
     private int fleetSize;
 
+    public Spaceline(){}
+
+    public Spaceline(int spacelineId, String spacelineName, String contactNumber, String foundedYear,
+    int fleetSize){
+        this.spacelineId = spacelineId;
+        this.spacelineName = spacelineName;
+        this.foundedYear = foundedYear;
+        this.fleetSize = fleetSize;
+    }
+
     public int getFleetSize() {
         return fleetSize;
     }

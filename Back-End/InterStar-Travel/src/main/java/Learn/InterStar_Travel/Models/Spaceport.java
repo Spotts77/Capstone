@@ -5,17 +5,27 @@ public class Spaceport {
     private String spaceportName;
     private String contactNumber;
     private String facilities;
-    private String location;
     private String yearEstablished;
 
-    private Destination destination;
+    private int destinationId;
 
-    public Destination getDestination() {
-        return destination;
+    public Spaceport(){}
+
+    public Spaceport(int spaceportId, String spaceportName, String contactNumber,
+                     String facilities, String yearEstablished){
+        this.spaceportId = spaceportId;
+        this.spaceportName = spaceportName;
+        this.contactNumber = contactNumber;
+        this.facilities = facilities;
+        this.yearEstablished = yearEstablished;
     }
 
-    public void setDestination(Destination destination) {
-        this.destination = destination;
+    public int getDestinationId() {
+        return destinationId;
+    }
+
+    public void setDestinationId(int destinationId) {
+        this.destinationId = destinationId;
     }
 
     public String getYearEstablished() {
@@ -24,14 +34,6 @@ public class Spaceport {
 
     public void setYearEstablished(String yearEstablished) {
         this.yearEstablished = yearEstablished;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getFacilities() {
@@ -65,4 +67,6 @@ public class Spaceport {
     public void setSpaceportId(int spaceportId) {
         this.spaceportId = spaceportId;
     }
+
+
 }
