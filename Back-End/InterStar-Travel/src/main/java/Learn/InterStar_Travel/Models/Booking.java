@@ -26,6 +26,16 @@ public class Booking {
         this.flightId = flightId;
     }
 
+    public Booking(LocalDate bookingDate, String bookingStatus, int ticketNumber,
+                   BigDecimal total, int userId, int flightId){
+        this.bookingDate = bookingDate;
+        this.bookingStatus = bookingStatus;
+        this.ticketNumber = ticketNumber;
+        this.total = total;
+        this.userId = userId;
+        this.flightId = flightId;
+    }
+
     public int getFlightId() {
         return flightId;
     }

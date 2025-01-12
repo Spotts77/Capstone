@@ -77,7 +77,7 @@ booking_id int primary key auto_increment,
 booking_date date not null, 
 booking_status varchar(50) not null, 
 ticket_num int not null,
-total int not null,
+total decimal not null,
 passenger_id int not null, 
 flight_id int not null, 
 constraint fk_passenger_id 
@@ -134,6 +134,10 @@ insert into flight (flight_name, departure_time, departure_date, arrival_time, p
 departure_port_id, arrival_port_id, spacecraft_id) values
 ('VST To MBA', '10:30:00', '2025-02-10', '22:10:00', 600.00, 1, 2, 1), 
 ('MBA To VST', '22:10:00', '2025-02-15', '10:30:00', 1000.00, 2, 1, 2);
+
+insert into booking (booking_date, booking_status, ticket_num, total, passenger_id, flight_id) 
+values
+('2025-02-10', 'Purchased', 1, 600.00, 1, 1);
 
 end //
 -- 4. Change the statement terminator back to the original.

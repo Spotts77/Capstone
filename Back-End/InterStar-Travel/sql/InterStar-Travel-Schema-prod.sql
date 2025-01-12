@@ -77,7 +77,7 @@ booking_id int primary key auto_increment,
 booking_date date not null, 
 booking_status varchar(50) not null, 
 ticket_num int not null,
-total int not null,
+total decimal not null,
 passenger_id int not null, 
 flight_id int not null, 
 constraint fk_passenger_id 

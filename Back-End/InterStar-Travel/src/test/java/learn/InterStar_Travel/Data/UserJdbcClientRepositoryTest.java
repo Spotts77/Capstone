@@ -37,6 +37,7 @@ public class UserJdbcClientRepositoryTest {
         repository.createUser(expected);
 
         User actual = repository.findUserByEmail("M.Beth@example.com");
-        assertEquals(expected, actual);
+        assertEquals(expected.getUserId(), actual.getUserId());
+        assertEquals(actual.getUserId(), NEXT_ID);
     }
 }

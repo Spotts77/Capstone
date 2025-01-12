@@ -18,6 +18,7 @@ public class FlightJdbcClientRepository implements FlightClientRepository{
         final String sql = """
                 SELECT
                 f.flight_id,
+                f.departure_date,
                 f.flight_name,
                 f.departure_time,
                 f.arrival_time,
