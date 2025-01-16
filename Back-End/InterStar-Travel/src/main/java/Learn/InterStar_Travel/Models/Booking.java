@@ -20,6 +20,7 @@ public class Booking {
                    BigDecimal total, int userId, int flightId){
         this.bookingId = bookingId;
         this.bookingDate = bookingDate;
+        this.bookingStatus = bookingStatus;
         this.ticketNumber = ticketNumber;
         this.total = total;
         this.userId = userId;

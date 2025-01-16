@@ -36,4 +36,11 @@ public class FlightJdbcClientRepositoryTest {
 
         assertEquals(allFlights.size(), sizeActual);
     }
+
+    @Test
+    void shouldFindFlightById(){
+        int expected = 1;
+        Flight actual = repository.findFlightById(expected);
+        assertEquals(expected, actual.getFlightId());
+    }
 }

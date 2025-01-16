@@ -6,7 +6,7 @@
   background-color: black;
 }
 #NavBarTitle{
-  padding-top: 20px;
+  padding-top: 0;
   color: #F1F9FF;
   padding-left: 50px;
   font-size: 25px;
@@ -15,7 +15,7 @@
 
 
 #formbutton {
-  margin-top: 20px;
+  margin-top: 0;
   margin-left: 680px;
   padding-top: 20px;
   padding-left: 15px; /* Add some padding for better spacing inside the button */
@@ -42,6 +42,7 @@
   border: none;
   font-size: 20px;
   font-weight: bold;
+  max-width: 30% !important;
 }
 
 .offcanvas-title{
@@ -64,14 +65,91 @@
   text-underline-offset: 10px;
   color: #F1F9FF !important;
 }
-
-.navbar-toggler{
+.navbar-toggler {
   margin-top: 20px;
-  border: white !important;
+  border: 2px solid #F1F9FF !important; 
+  padding: 6px 10px;  
+  background-color: transparent; 
+  transition: all 0.3s ease; 
+  position: relative;  
+  top: -8px;  
+  right: 20px; 
 }
 
-.nav-icon{
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-color: #53D9FC; 
+}
+
+
+.nav-icon {
   width: 28px;
   height: 28px;
   margin-right: 10px;
+  position: relative;
 }
+
+.nav-icon span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #F1F9FF;
+  margin: 5px 0;
+  border-radius: 2px;  
+  transition: all 0.3s ease;  
+}
+
+
+.navbar-toggler-icon {
+  width: 35px; 
+  height: 35px;
+  background-color: transparent; 
+  border-radius: 50%;  
+  border: 2px solid #53D9FC;  
+  position: relative;
+  transition: all 0.3s ease;  
+}
+
+.navbar-toggler-icon:hover {
+  background-color: #53D9FC;  
+  border-color: #53D9FC;  
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #53D9FC;  
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: 8px;  
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.navbar-toggler-icon::after {
+  bottom: 8px;  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 10px; 
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  transform: rotate(-45deg); 
+  bottom: 10px; 
+}
+
+.navbar-toggler.collapsed .nav-icon span {
+  opacity: 0;  
+}
+

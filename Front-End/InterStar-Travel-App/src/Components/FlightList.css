@@ -1,0 +1,15 @@
+#flight-list-title{
+    margin-top: 30px;
+    font-size: 100px;
+    font-weight: bold;
+    color: transparent;
+    background-image: radial-gradient(circle 800px at center, #53D9FC, #03459B) !important;
+    background-position: relative; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: rgba(241, 249, 255, 0.2) 0px 0px 20px;
+}
+
+#background{
+    background-color: #012549;
+}

@@ -30,13 +30,10 @@ function Nav() {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Manage Booking</Link>
+                <Link className="nav-link" to="/BookingSearchForm">Manage Booking</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Destinations</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">Space Craft</Link>
+                <Link className="nav-link" to="/DestinationList">Destinations</Link>
               </li>
             </ul>
           </div>

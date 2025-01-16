@@ -23,7 +23,6 @@
     background-size: cover;
     background-position: center;
     transform: scaleX(1); 
-    /* Mirrors the background image horizontally */
     z-index: 1;
   }
   
@@ -45,22 +44,28 @@
     padding-top: 160px;
   }
 
-  #Headline{
-    font-size: 100px;
-    font-family: monospace;
-    background-image: linear-gradient(to bottom, #53D9FC,#03459B);
-    background-position: relative; /* Gradient colors */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: flex; 
-    flex-direction: column; 
+  #Headline {
+    font-size: 100px !important;
+    font-family: monospace !important;
+    background-image: linear-gradient(to bottom, #53D9FC, #03459B) !important;  /* Apply gradient to the whole h1 */
+    background-clip: text !important;  /* Clip the background to the text */
+    -webkit-background-clip: text !important;  /* For Safari compatibility */
+    color: transparent !important;  /* Make the text transparent to see the gradient */
+    display: flex !important; 
+    flex-direction: column !important; 
     justify-content: left;
     align-items: left;
     text-align: left;
     animation: slideIn 2.5s ease-in-out forwards;
     text-shadow: rgba(241, 249, 255, 0.2) 0px 0px 20px;
   }
+  
+  #Headline span {
+    display: inline-block; 
+    color: inherit; 
+    font-size: 100px;
+  }
+  
 
   @keyframes slideIn {
     0% {
@@ -88,5 +93,6 @@
       opacity: 1;  /* Element becomes fully visible */
     }
   }
+  
 
 

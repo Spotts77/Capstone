@@ -33,6 +33,24 @@ private final JdbcClient jdbcClient;
     }
 
     @Override
+    public User findUserById(int id){
+        final String sql = """
+                select
+                passenger_id,
+                first_name,
+                last_name,
+                email,
+                phone_number
+                from passenger
+                where passenger_id = ?;
+                """;
+        return jdbcClient.sql(sql)
+                .param(id)
+                .query(new UserMapper())
+                .optional().orElse(null);
+    }
+
+    @Override
     public User createUser(User user){
         final String sql = """
                 INSERT INTO passenger (first_name, last_name, email, phone_number)

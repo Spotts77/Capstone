@@ -1,0 +1,92 @@
+/* Style for the flight card container */
+.flight-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #F1F9FF;
+  display: flex;
+  flex-direction: row; /* Horizontal layout for flight cards */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* On hover, slightly elevate the card */
+.flight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* The body of the card */
+.flight-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flight title with some margin and font styling */
+.flight-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #03459B;
+}
+
+/* Styling for the flight details section */
+.flight-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Each individual flight detail */
+.flight-detail {
+  flex: 1 1 200px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+
+.flight-detail p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Button style for selecting a flight */
+.view-details-button {
+  background-color: #03459B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+  background-color: #026aa7;
+}
+
+/* Price formatting */
+.flight-detail p.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #03459B;
+}
+
+/* Ensure that the cards are displayed nicely in a grid layout */
+.flight-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+#flight-detail-title{
+  color: #012549;
+}
+
+#flight-detail-info{
+  color: #03459B;
+}

@@ -40,4 +40,26 @@ public class FlightJdbcClientRepository implements FlightClientRepository{
                 .query(new FlightMapper())
                 .list();
     }
+
+    @Override
+    public Flight findFlightById(int id){
+        final String sql = """
+                SELECT
+                f.flight_id,
+                f.departure_date,
+                f.flight_name,
+                f.departure_time,
+                f.arrival_time,
+                f.price_per_ticket,
+                f.departure_port_id,
+                f.arrival_port_id,
+                f.spacecraft_id
+                from flight f
+                where f.flight_id = ?;
+                """;
+        return jdbcClient.sql(sql)
+                .param(id)
+                .query(new FlightMapper())
+                .optional().orElse(null);
+    }
 }
